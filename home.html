@@ -4,15 +4,59 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home page </title>
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
-<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.24/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
-    <div class="mockup-phone border-primary">
-        <div class="mockup-phone-camera"></div>
-        <div class="mockup-phone-display">
-          <img alt="wallpaper" src="https://img.daisyui.com/images/stock/453966.webp"/>
-        </div>
-      </div>
+    <main class=" flex justify-center">
+      <div class="mockup-phone">
+        <div class="camera"></div>
+        <div class="display">
+          <div class="artboard artboard-demo phone-3">
+
+            <!-- available balence  -->
+             <div>
+              <div class="stats shadow">
+                <div class="stat">
+                 
+                  <div class="stat-value">89,400</div>
+                  <div class="stat-desc">Available Blance</div>
+                </div>
+              </div>
+             </div>
+             <div class="divider"></div>
+             <!-- User action buttonb  -->
+              <div>
+                <button class="btn btn-lg">Add mony </button>
+                <button class="btn btn-lg">Cash out </button>
+              </div>
+              <div class="divider"></div>
+              <!-- Add mony form start -->
+              <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+                <form class="card-body">
+                  <div class="form-control">
+                    <label class="label">
+                      <span class="label-text">Amount</span>
+                    </label>
+                    <input  type="text" placeholder="Amount" class="input input-bordered" required />
+                  </div>
+                  <div class="form-control">
+                    <label class="label">
+                      <span class="label-text">Pin</span>
+                    </label>
+                    <input  type="password" placeholder="Your pin " class="input input-bordered" required autocomplete="off" />
+                   
+                  </div>
+                  <div class="form-control mt-6">
+                    <button  class="btn btn-primary">Add mony</button>
+                  </div>
+                </form>
+              </div>
+              <!-- Add mony form send -->
+            </div>
+          </div>
+          </div>
+    </main>
+    <script src="/js/home.js"></script>
 </body>
 </html>
