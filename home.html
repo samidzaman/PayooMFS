@@ -29,12 +29,12 @@
           <div class="divider"></div>
           <!-- User action buttonb  -->
           <div>
-            <button class="btn btn-lg">Add mony </button>
-            <button class="btn btn-lg">Cash out </button>
+            <button id="show-add-mony" class="btn btn-lg">Add mony </button>
+            <button id="show-cash-out" class="btn btn-lg">Cash out </button>
           </div>
           <div class="divider"></div>
           <!-- Add mony form start -->
-          <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+          <div id="add-mony-frm" class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
             <form class="card-body">
               <div class="form-control">
                 <label class="label">
@@ -56,11 +56,36 @@
             </form>
           </div>
           <!-- Add mony form send -->
+           <!-- Cash out form start -->
+           <div id="cash-out-frm" class=" hidden card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+            <form class="card-body">
+              <div class="form-control">
+                <label class="label">
+                  <span class="label-text">Amount</span>
+                </label>
+                <input id="input-cash-amount" type="text" placeholder="Amount" class="input input-bordered" required />
+              </div>
+              <div class="form-control">
+                <label class="label">
+                  <span class="label-text">Pin</span>
+                </label>
+                <input id="input-cash-pin" type="password" placeholder="Your pin " class="input input-bordered" required
+                  autocomplete="off" />
+
+              </div>
+              <div class="form-control mt-6">
+                <button id="cash-out-btn" class="btn btn-primary">Cash out</button>
+              </div>
+            </form>
+          </div>
+
+           <!-- Cash out form end -->
         </div>
       </div>
     </div>
   </main>
   <script src="js/home.js"></script>
+  <script src="js/feature.js"></script>
 </body>
 
 </html>

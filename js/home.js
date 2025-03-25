@@ -31,3 +31,32 @@ document.getElementById('add-mony-btn').addEventListener('click', function (even
     }
 
 });
+
+// cash out mony 
+// step : 1 add eventhandler button
+document.getElementById('cash-out-btn').addEventListener('click', function(event){
+    event.preventDefault();
+
+    // step: 2 get the amount 
+    const cashAmount = document.getElementById('input-cash-amount').value;
+    //convert the amount in string to intiger 
+    const inamount = parseFloat(cashAmount);
+
+    //step:3 get the pin number 
+    const cashPin =  document.getElementById('input-cash-pin').value;
+   //step : 4 verify pin number 
+    if(cashPin === '578023'){
+       const originalBlance = document.getElementById('main-blance').innerText;
+       //convert the main blance to intiger 
+       const Inblance = parseFloat(originalBlance);
+       const newBlance = Inblance - inamount;
+       console.log(newBlance);
+    //    step : 5 set the newblance in the frontend 
+    document.getElementById('main-blance').innerText = newBlance;
+
+    }
+    else{
+        alert('invalid information')
+    }
+    
+})
